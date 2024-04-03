@@ -1,0 +1,7 @@
+[
+{
+  "directory": "....../Desktop/Cppcheck-template/build",
+  "command": "/usr/bin/c++    -o CMakeFiles/example.dir/example.cpp.o -c ...../Desktop/Cppcheck-template/example.cpp",
+  "file": "........./Desktop/Cppcheck-template/example.cpp"
+}
+]

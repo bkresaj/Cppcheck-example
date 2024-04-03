@@ -1,0 +1,98 @@
+example.cpp:32:37: error: Array 'arr[5]' accessed at index 10, which is out of bounds. [arrayIndexOutOfBounds]
+    int element_out_of_bounds2 = arr[10];
+                                   
+
+example.cpp:9:6: error: Dereferencing 'deleted_pointer' after it is deallocated / released [deallocuse]
+    *deleted_pointer = 10;
+    
+
+example.cpp:38:5: error: Memory leak: memory_leak_pointer [memleak]
+    return 0;
+   
+
+example.cpp:13:6: error: Null pointer dereference: dereference_null_pointer [nullPointer]
+    *dereference_null_pointer = 10;
+    
+
+example.cpp:12:37: note: Assignment 'dereference_null_pointer=nullptr', assigned value is 0
+    int* dereference_null_pointer = nullptr;
+                                   
+
+example.cpp:13:6: note: Null pointer dereference
+    *dereference_null_pointer = 10;
+    
+
+example.cpp:20:30: error: Division by zero. [zerodiv]
+    int division_by_zero = a / b;
+                            
+
+example.cpp:19:21: note: Assignment 'b=0', assigned value is 0
+    int a = 10, b = 0;
+                   
+
+example.cpp:20:30: note: Division by zero
+    int division_by_zero = a / b;
+                            
+
+example.cpp:31:9: style: Variable 'arr' can be declared with const [constVariable]
+    int arr[5] = {1, 2, 3, 4, 5};
+       
+
+example.cpp:28:40: error: Out of bounds access in expression 'vec.at(10)' because 'vec' is empty. [containerOutOfBounds]
+    int element_out_of_bounds1 = vec.at(10);
+                                      
+
+example.cpp:24:37: error: Shifting 32-bit value by 50 bits is undefined behaviour [shiftTooManyBits]
+    int shift_count_overflow = num1 << 50;
+                                   
+
+example.cpp:24:37: error: Signed integer overflow for expression 'num1<<50'. [integerOverflow]
+    int shift_count_overflow = num1 << 50;
+                                   
+
+example.cpp:23:16: note: Assignment 'num1=10', assigned value is 10
+    int num1 = 10;
+              
+
+example.cpp:24:37: note: Integer overflow
+    int shift_count_overflow = num1 << 50;
+                                   
+
+example.cpp:8:12: error: Memory is allocated but not initialized: deleted_pointer [uninitdata]
+    delete deleted_pointer;
+          
+
+example.cpp:36:34: error: Uninitialized variable: value3 [uninitvar]
+    int uninitialized_variable = value3 + 10;
+                                
+
+example.cpp:16:30: style: Variable 'memory_leak_pointer' is assigned a value that is never used. [unreadVariable]
+    int* memory_leak_pointer = new int;
+                            
+
+example.cpp:20:26: style: Variable 'division_by_zero' is assigned a value that is never used. [unreadVariable]
+    int division_by_zero = a / b;
+                        
+
+example.cpp:24:30: style: Variable 'shift_count_overflow' is assigned a value that is never used. [unreadVariable]
+    int shift_count_overflow = num1 << 50;
+                            
+
+example.cpp:28:32: style: Variable 'element_out_of_bounds1' is assigned a value that is never used. [unreadVariable]
+    int element_out_of_bounds1 = vec.at(10);
+                              
+
+example.cpp:32:32: style: Variable 'element_out_of_bounds2' is assigned a value that is never used. [unreadVariable]
+    int element_out_of_bounds2 = arr[10];
+                              
+
+example.cpp:36:32: style: Variable 'uninitialized_variable' is assigned a value that is never used. [unreadVariable]
+    int uninitialized_variable = value3 + 10;
+                              
+
+example.cpp:16:10: style: Variable 'memory_leak_pointer' is allocated memory that is never used. [unusedAllocatedMemory]
+    int* memory_leak_pointer = new int;
+        
+
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
